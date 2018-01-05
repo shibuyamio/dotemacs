@@ -73,6 +73,10 @@
 
 ;;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
+;;; *.~ とかのバックアップファイルを作らない
+(setq make-backup-files nil)
+;;; .#* とかのバックアップファイルを作らない
+(setq auto-save-default nil)
 ;;; 履歴数を大きくする
 (setq history-length 10000)
 
@@ -87,4 +91,19 @@
 ;; メニューバーを隠す
 (tool-bar-mode -1)
 
+;; バッファを一気に消す
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer 
+          (delq (current-buffer) 
+                (remove-if-not 'buffer-file-name (buffer-list)))))
+(defun kill-all-buffers ()
+  (interactive)
+  (mapcar 'kill-buffer (buffer-list))
+  (delete-other-windows))
 
+(global-set-key (kbd "C-x K") 'kill-all-buffers)
+
+;; パスをシェルから引き継ぐ
+(exec-path-from-shell-initialize)
