@@ -55,9 +55,13 @@
 ;; rspec-mode
 (require 'rspec-mode)
 (add-hook 'ruby-mode-hook 'rspec-mode)
+;; binstubを使うので無効にする
+(custom-set-variables '(rspec-use-spring-when-possible nil))
+(custom-set-variables '(rspec-use-bundler-when-possible nil))
 (eval-after-load 'rspec-mode
   '(rspec-install-snippets))
 (add-hook 'after-init-hook 'inf-ruby-switch-setup)
+
 
 ;; project管理
 (projectile-rails-global-mode)

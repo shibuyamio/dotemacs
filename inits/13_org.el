@@ -1,5 +1,20 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
+
+;; 見出しをインデントする
+(setq org-startup-indented t)
+
+;; 見出しをインデントした時にアスタリスクが減るのを防ぐ
+(setq org-indent-mode-turns-on-hiding-stars nil)
+
+;; インデントの幅を設定
+(setq org-indent-indentation-per-level 4)
+
+;; 見出しの初期状態（全て表示）
+(setq org-startup-folded 'showall)
+
+(setq org-mode-hook 'turn-on-auto-fill)
+
 ;; org-captureで2種類のメモを扱うようにする
 (setq org-capture-templates
       '(("t" "New TODO" entry
