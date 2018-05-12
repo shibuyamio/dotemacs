@@ -23,6 +23,7 @@
 (depends-on "feature-mode")
 (depends-on "flycheck")
 (depends-on "flycheck-cask")
+(depends-on "flycheck-jest")
 (depends-on "flymake-json")
 (depends-on "helm")
 (depends-on "helm-ag")

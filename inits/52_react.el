@@ -13,7 +13,6 @@
 (add-hook 'js2-mode-hook
       (lambda ()
         (tern-mode t)
-        (local-set-key (kbd "-") (smartchr '(" - " " => " "-")))
 		(setq indent-tabs-mode nil)
 		(setq js-indent-level 2)
 		(setq js2-basic-offset 2)

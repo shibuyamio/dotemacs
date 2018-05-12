@@ -4,6 +4,9 @@
 ;; マウスで選択するとコピーする Emacs 24 ではデフォルトが nil
 (setq mouse-drag-copy-region t)
 
+;; direnvを有効
+(direnv-mode)
+
 ; 言語を日本語にする
 (set-language-environment 'Japanese)
 
