@@ -23,9 +23,9 @@
 (setq ruby-electric-expand-delimiters-list nil)
 
 ;; ruby-block.el --- highlight matching block
-(require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
+;;(require 'ruby-block)
+;; (ruby-block-mode t)
+;; (setq ruby-block-highlight-toggle t)
 
 ;; (require 'rubocop)
 ;; (add-hook 'ruby-mode-hook 'rubocop-mode)

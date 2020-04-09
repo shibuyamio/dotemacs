@@ -10,3 +10,5 @@ snippets/rjsx-mode/
 snippets/web-mode
 /.DS_Store
 /bookmarks
+recentf
+ido.last

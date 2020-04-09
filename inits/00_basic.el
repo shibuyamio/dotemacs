@@ -10,17 +10,15 @@
 ; 言語を日本語にする
 (set-language-environment 'Japanese)
 
-;; Atok
-
 ;; IME関連機能の有効化
 (setq default-input-method "MacOSX")
 ;; IME ON/OFF時のカーソルカラー
-(mac-set-input-method-parameter "com.justsystems.inputmethod.atok30.Roman" 'cursor-color "blue") 
-(mac-set-input-method-parameter "com.justsystems.inputmethod.atok30.Japanese" 'cursor-color "#f07384")
-(mac-set-input-method-parameter "com.apple.keylayout.US" 'cursor-color "#666666")
+;;(mac-set-input-method-parameter "com.justsystems.inputmethod.atok30.Roman" 'cursor-color "blue") 
+;;(mac-set-input-method-parameter "com.justsystems.inputmethod.atok30.Japanese" 'cursor-color "#f07384")
+;;(mac-set-input-method-parameter "com.apple.keylayout.US" 'cursor-color "#666666")
 
 ;; IME ONF時のモードラインタイトル
-(mac-set-input-method-parameter "com.justsystems.inputmethod.atok30.Japanese" `title "[あ]")
+;; (mac-set-input-method-parameter "com.justsystems.inputmethod.atok30.Japanese" `title "[あ]") 
 
 ; 極力UTF-8とする
 (prefer-coding-system 'utf-8)

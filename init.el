@@ -3,18 +3,22 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
 (package-initialize)
 
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-
 (cask-initialize)
 
-(require 'pallet)
 (pallet-mode t)
 
 (require 'use-package)
 
 (require 'init-loader)
+
+;; Load configuration files'.
+(init-loader-load "~/.emacs.d/inits")
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

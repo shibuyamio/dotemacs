@@ -1,4 +1,4 @@
-(load-theme 'solarized t)
+(load-theme 'solarized-light t)
 
 (if (display-graphic-p)
   
@@ -30,15 +30,7 @@
       (setq initial-frame-alist default-frame-alist)
 
       ;; (setcdr (assoc "*rspec-compilation*" popwin:special-display-config) '(:dedicated t :position bottom :stick t :noselect nil :height 0.4))
-
-      (let ((font-size 17))
-        (create-fontset-from-ascii-font
-         (format "Ricty-%d:weight=normal:slant=normal" font-size) nil "ricty")
-
-        (set-fontset-font "fontset-ricty" 'unicode
-                          (font-spec :family "Ricty" :size font-size) nil 'append))
-
-      (add-to-list 'default-frame-alist '(font . "fontset-ricty"))
+1
       )
 
   ;; Terminal Settings
